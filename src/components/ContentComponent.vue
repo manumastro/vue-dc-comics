@@ -6,6 +6,9 @@
         <ComicsCards v-for="(comic, index) in comicsData" :key="`comic-${index}`"
         :comicElement="comic" />
       </div>
+      <div class="load-more">
+        <button>load more</button>
+      </div>
     </section>
   </div>
 </template>
@@ -32,7 +35,20 @@ export default {
     padding: 21vh 0;
   }
   #comics{
-    padding: 30px 0 80px 0;
+    padding: 30px 0 0 0;
     background-color: #1c1c1c;
+    .load-more{
+      text-align: center;
+      padding: 20px 0;
+      button{
+        color: whitesmoke;
+        text-transform: uppercase;
+        background-color: $primary-color;
+        padding: 8px 60px;
+        font-size: 12px;
+        font-weight: bold;
+        border: none;
+      }
+    }
   }
 </style>

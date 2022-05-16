@@ -100,7 +100,7 @@ export default {
             font-size: 13px;
             font-weight: 500;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: color 0.1s;
             &:hover{
               color: $primary-color;
             }
