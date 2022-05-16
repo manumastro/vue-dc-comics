@@ -2,19 +2,24 @@
   <section>
     <div class="container em-container">
       <ul>
-        <li v-for="(el, index) in list" :key="`element${index}`">
+        <!-- <li v-for="(el, index) in list" :key="`element${index}`">
           <a href="#">
             <img :src="el.image" :alt="el.name">
             <span>{{el.name}}</span>
           </a>
-        </li>
+        </li> -->
+        <UnderContentCards v-for="(item, index) in list" :key="`item-${index}`"
+        :card = "item"
+        />
       </ul>
     </div>
   </section>
 </template>
 
 <script>
+import UnderContentCards from './UnderContentCards.vue'
 export default {
+  components: { UnderContentCards },
   name: 'UnderContentComponent',
   data(){
     return{
@@ -61,22 +66,7 @@ section{
     list-style: none;
     @include center;
     justify-content: space-between;
-    li{
-      z-index: 2;
-      a{
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        img{
-          height: 55px;
-          padding: 0 15px;
-        }
-        span{
-          font-size: 14px;
-          font-weight: 500;
-        }
-      }
-    }
+    
   }
   }
   
