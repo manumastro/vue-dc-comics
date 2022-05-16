@@ -49,8 +49,13 @@
         <div class="signup">
           <button>SIGN-UP NOW!</button>
         </div>
-        <div class="social">
-          social
+        <div class="social d-flex align-items-center">
+          <span>FOLLOW US</span>
+          <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
+          <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
+          <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+          <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
+          <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
         </div>
       </div>
     </section>
@@ -119,7 +124,6 @@ export default {
       background-color: #303030;
       z-index: 3;
       .signup{
-        border: 1px solid $primary-color;
         button{
         color: whitesmoke;
         font-weight: 500;
@@ -127,10 +131,21 @@ export default {
         background-color: #303030;
         padding: 10px;
         border-color: $primary-color;
+        transition: background-color 0.3s ease-in-out;
+        &:hover{
+          background-color: $primary-color;
+        }
       }
       }
       .social{
-        border: 1px solid $primary-color;
+        span{
+          color: $primary-color;
+          font-weight: 600;
+          font-size: 20px;
+        }
+        span, a{
+          margin-right: 20px;
+        }
       }
 
     }

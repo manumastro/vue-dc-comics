@@ -2,34 +2,10 @@
   <section>
     <div class="container em-container">
       <ul>
-        <li>
+        <li v-for="(el, index) in list" :key="`element${index}`">
           <a href="#">
-            <img src="../assets/img/buy-comics-digital-comics.png" alt="img">
-            <span>digital comics</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-merchandise.png" alt="img">
-            <span>dc merchandise</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-subscriptions.png" alt="img">
-            <span>subscription</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-shop-locator.png" alt="img">
-            <span>comic shop locator</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../assets/img/buy-dc-power-visa.svg" alt="img">
-            <span>dc power visa</span>
+            <img :src="el.image" :alt="el.name">
+            <span>{{el.name}}</span>
           </a>
         </li>
       </ul>
@@ -40,6 +16,33 @@
 <script>
 export default {
   name: 'UnderContentComponent',
+  data(){
+    return{
+      list: 
+        [
+          {
+            image: require('../assets/img/buy-comics-digital-comics.png'),
+            name: 'digital comics',
+          },
+          {
+            image: require('../assets/img/buy-comics-merchandise.png'),
+            name: 'dc merchandise',
+          },
+          {
+            image: require('../assets/img/buy-comics-subscriptions.png'),
+            name: 'subscription',
+          },
+          {
+            image: require('../assets/img/buy-comics-shop-locator.png'),
+            name: 'comic shop locator',
+          },
+          {
+            image: require('../assets/img/buy-dc-power-visa.svg'),
+            name: 'dc power visa',
+          },
+        ]
+    }
+  }
 }
 </script>
 
