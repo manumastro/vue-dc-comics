@@ -7,32 +7,17 @@
         </div>
       </div>
       <div class="col col-right em-col">
-        <nav>
-          <ul>
-            <li v-for="(el, index) in list" :key="`menu${index}`">
-              <a
-              :class="{ active : el.isActive }" 
-              href="#">{{el.name}}</a>
-            </li>
-            <!-- <li><a class="active" href="#">comics</a></li>
-            <li><a href="#">movies</a></li>
-            <li><a href="#">tv</a></li>
-            <li><a href="#">games</a></li>
-            <li><a href="#">collectibles</a></li>
-            <li><a href="#">videos</a></li>
-            <li><a href="#">fans</a></li>
-            <li><a href="#">news</a></li>
-            <li><a href="#">shop</a></li> -->
-          </ul>
-        </nav>
+        <NavComponent :menuList="list"/>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import NavComponent from './NavComponent.vue';
 export default {
   name: 'HeaderComponent',
+  components: {NavComponent},
   data(){
     return{
       list : 
@@ -99,36 +84,7 @@ export default {
         height: 80px;
       }
     }
-    nav{
-      @include center;
-      height: 100%;
-      ul{
-        display: flex;
-        text-transform: uppercase;
-        list-style: none;
-        margin: auto;
-        a{
-          color: black;
-          text-decoration: none;
-          font-size: 13px;
-          font-weight: 600;
-          margin-right: 30px;
-        }
-        .active{
-          position: relative;
-          color: $primary-color;
-          &:before{
-            position: absolute;
-            content: '';
-            bottom: -54px;
-            right: 0;
-            width: 100%;
-            border-bottom: 5px solid $primary-color;
-          }
-        }
-        
-      }
-    }
+    
     
       
   
