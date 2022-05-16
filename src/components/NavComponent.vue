@@ -32,7 +32,7 @@ nav{
         list-style: none;
         margin: auto;
         a{
-          color: black;
+          color: #464646;
           text-decoration: none;
           font-size: 13px;
           font-weight: 600;
@@ -44,7 +44,7 @@ nav{
           &:before{
             position: absolute;
             content: '';
-            bottom: -54px;
+            bottom: -53px;
             right: 0;
             width: 100%;
             border-bottom: 5px solid $primary-color;

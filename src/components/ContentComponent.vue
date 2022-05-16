@@ -1,24 +1,37 @@
 <template>
-  <section>
-    <div class="container">
-      <h3>Content goes here</h3>
-    </div>
-  </section>
+  <div>
+    <section id="jumbotron"></section>
+    <section id="comics">
+      <div class="container">
+        <div class="comic-card"
+        v-for="(comic, index) in comicsData" :key="`comic-${index}`"
+        >
+        <span>{{comic.series}}</span>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
+import comics from '../assets/data/dc-comics.json';
 export default {
-  name: 'ContentComponent'
+  name: 'ContentComponent',
+  data(){
+    return{
+      comicsData: comics
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/style/_mixins.scss';
-  section{
-    //padding: 50px 0;
-    height: 140px;
-    background-color: black;
-    color: white;
-    @include center-vertical;
+  #jumbotron{
+    background-image: url('../assets/img/jumbotron.jpg');
+    padding: 21vh 0;
+  }
+  #comics{
+    background-color: #1c1c1c;
   }
 </style>

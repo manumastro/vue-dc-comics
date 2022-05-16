@@ -119,7 +119,7 @@ export default {
     }
     .signup-social{
       @include center;
-      min-height: 138px;
+      min-height: 136px;
       position: relative;
       background-color: #303030;
       z-index: 3;
