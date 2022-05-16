@@ -3,7 +3,7 @@
     <div class="row em-row">
       <div class="col col-left em-col">
         <div class="logo">
-          <img src="../assets/img/dc-logo.png" alt="">
+          <a href="#"><img src="../assets/img/dc-logo.png" alt=""></a>
         </div>
       </div>
       <div class="col col-right em-col">
@@ -82,6 +82,7 @@ export default {
       @include center-vertical;
       img{
         height: 80px;
+        cursor: pointer;
       }
     }
   }
