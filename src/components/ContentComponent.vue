@@ -2,12 +2,15 @@
   <div>
     <section id="jumbotron"></section>
     <section id="comics">
+      <div class="container" id="current-series">
+        <span>current series</span>
+      </div>
       <div class="container d-flex flex-wrap">
         <ComicsCards v-for="(comic, index) in comicsData" :key="`comic-${index}`"
         :comicElement="comic" />
       </div>
       <div class="load-more">
-        <button>load more</button>
+        <a href="#"><button>load more</button></a>
       </div>
     </section>
   </div>
@@ -35,8 +38,20 @@ export default {
     padding: 21vh 0;
   }
   #comics{
+    position: relative;
     padding: 30px 0 0 0;
     background-color: #1c1c1c;
+    #current-series span{
+      position: absolute;
+      top: -32px;
+      left: 310px;
+      padding: 5px 25px;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: whitesmoke;
+      background-color: $primary-color;
+    }
     .load-more{
       text-align: center;
       padding: 20px 0;
